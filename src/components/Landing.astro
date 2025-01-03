@@ -1,0 +1,89 @@
+---
+---
+
+<section>
+	<div class="banner" >
+		<img 
+			src="./public/images/Pasacalles-la-Mancha-Buenos-Aires.webp" 
+			alt="Pasacalles la Mancha"
+		>
+	</div>
+	<header>
+		<h1>
+			<span class="pasacalles" >
+				Pasacalles
+			</span>
+			<span>
+				la mancha
+			</span>
+		</h1>
+		<h2>30 AÑOS DE EXPERIENCIA ¡VAMOS A TODOS LADOS!</h2>
+	</header>
+</section>
+
+<style>
+	section{
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		height:100vh;
+		width: 100%;
+	}
+	.banner{
+		z-index: -1;
+		position: absolute;
+		display: grid;
+		align-items: center;
+		justify-content: center;
+		width: 90%;
+		height: 100%;
+		min-width: 1000px;
+		max-width: 1290px;
+		left: 50%;
+		top: 50%;
+		overflow: hidden;
+		transform: translate(-50%,-50%);
+		background: radial-gradient(
+			ellipse,
+			var(--rose),
+			var(--transparent)
+			55%
+		);
+	}
+	.banner::after{
+		position: absolute;
+		z-index: 0;
+		content: " ";
+		width: 70px;
+		right: 0;
+		height: 100%;
+		background:linear-gradient(
+			to left,
+			var(--white),
+			var(--transparent)
+		);
+	}
+	.banner::before{
+		position: absolute;
+		z-index: 0;
+		content: " ";
+		width: 70px;
+		left: 0;
+		height: 100%;
+		background:linear-gradient(
+			to right,
+			var(--white),
+			var(--transparent)
+		);
+	}
+	header{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	
+	img{
+		width: 100%;
+	}
+</style>

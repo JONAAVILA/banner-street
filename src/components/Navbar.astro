@@ -1,0 +1,54 @@
+---
+import WhatsappButton from "./buttons/WhatsappButton.astro";
+import InstagramButton from "./buttons/InstagramButton.astro";
+import MetaButton from "./buttons/MetaButton.astro";
+---
+
+<aside>
+    <div class="nav_container" >
+        <div class="nav_box_icons" >
+            <WhatsappButton/>
+            <InstagramButton/>
+            <MetaButton/>
+        </div>
+        <div>
+            <a class="button_call" href="tel:+591122554455">
+                +591122554455
+            </a>
+        </div>
+    </div>
+</aside>
+
+<style>
+    aside{
+        z-index: 10;
+        position: fixed;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 50px 15px 15px 15px;
+        background: linear-gradient(var(--white) 70%,var(--transparent));
+    }
+    .nav_container{
+        width: 1000px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav_box_icons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+    .button_call{
+        background: var(--blue);
+        color: var(--white);
+        padding: 10px;
+        border-radius: 10px;
+    }
+</style>
