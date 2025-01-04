@@ -1,10 +1,71 @@
 ---
+import Award from "./icons/Award.astro";
+import Call from "./icons/call.astro";
+
 ---
 
 <section>
-    
+   <div class="box_info_heading" >
+        <h3>¡Pasacalles en el acto!</h3>
+        <div>
+            <p><Award/> CALIDAD</p>
+            <p>EL MEJOR PRECIO</p>
+            <p>RESPUESTA INMEDIATA</p>
+        </div>
+    </div> 
+   <div class="container_phone_number" >
+        <div class="box_phone_number" >
+            <Call color="blue" size="large" />
+            <p class="phone_number" >
+                15 7364-1513
+            </p>
+        </div>
+        <p class="call_us" >¡LLAMANOS 😜!</p>
+    </div> 
 </section>
 
 <style>
-
+    section{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 900px;
+        margin-bottom: 50px;
+    }
+    h3{
+        color: var(--blue);
+    }
+    p{
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        gap: 5px;
+    }
+    .box_info_heading{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+    .container_phone_number{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+    .box_phone_number{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    .phone_number{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+    }
+    .call_us{
+        font-size: 2rem;
+    }
 </style>
