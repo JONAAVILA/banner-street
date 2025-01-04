@@ -12,19 +12,37 @@
     section{
         display: grid;
         align-items: center;
-        align-items: center;
-        margin-top: -120px;
+        justify-content: center;
+        margin-top: -150px;
         height: 270px;
         width: 100%;
         overflow: hidden;
     }
     div{
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-around;
         height: 150px;
+        max-width: 1250px;
         width: 110vw;
         background-color: var(--blue);
-        transform: rotate(-5deg) translateX(-5%);
+        transform: rotate(-5deg);
+    }
+    div::after{
+        position: absolute;
+        content: " ";
+        width: 80px;
+        height: 100%;
+        right: -79px;
+        background: linear-gradient(to right, var(--blue),var(--white));
+    }
+    div::before{
+        position: absolute;
+        content: " ";
+        width: 80px;
+        height: 100%;
+        left: -79px;
+        background: linear-gradient(to left, var(--blue),var(--white));
     }
 </style>
