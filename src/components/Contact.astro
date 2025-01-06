@@ -3,6 +3,7 @@ import Email from "./icons/Email.astro";
 import Instagram from "./icons/Instagram.astro";
 import Location from "./icons/Location.astro";
 import Meta from "./icons/Meta.astro";
+import Form from "./Form.astro";
 ---
 
 <section>
@@ -17,18 +18,18 @@ import Meta from "./icons/Meta.astro";
         </div>
     </div>
     <div>
-        <form action="">
-            <input type="text">
-        </form>
+        <Form/>
     </div>
 </section>
 
 <style>
     section{
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
         width: 900px;
+        margin-top: 30px;
+        margin-bottom: 100px;
     }
     h3{
         color: var(--blue);
