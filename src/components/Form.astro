@@ -1,9 +1,26 @@
 ---
 import Send from "./icons/Send.astro";
-
 ---
 
-<form action="">
+<script>
+    import emailjs from "emailjs-com"
+
+    document.getElementById('contact_form')?.addEventListener('submit', async (e)=>{
+        e.preventDefault()
+
+        const form = e.target
+        try {
+            // const res = await emailjs.sendForm(
+
+            // )
+        } catch (error) {
+            
+        }
+    })
+
+</script>
+
+<form id="contact_form" >
     <label for="">NOMBRE Y APELLIDO</label>
     <input type="text" required>
 
