@@ -21,17 +21,17 @@ import Send from "./icons/Send.astro";
 </script>
 
 <form id="contact_form" >
-    <label for="">NOMBRE Y APELLIDO</label>
-    <input type="text" required>
+    <label for="nameAndSurname">NOMBRE Y APELLIDO</label>
+    <input id="nameAndSurname" type="text" required>
 
-    <label for="">TELÉFONO</label>
-    <input type="text" required>
+    <label for="phone">TELÉFONO</label>
+    <input id="phone" type="text" required>
 
-    <label for="">EMAIL</label>
-    <input type="text" required>
+    <label for="email">EMAIL</label>
+    <input id="email" type="text" required>
 
-    <label for="">CONSULTA</label>
-    <textarea name="" id="" />
+    <label for="message">CONSULTA</label>
+    <textarea name="" id="message" />
     <div class="box_button_submit" >
         <button type="submit" >
             <Send/>
