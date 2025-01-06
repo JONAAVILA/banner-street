@@ -22,16 +22,34 @@ import Send from "./icons/Send.astro";
 
 <form id="contact_form" >
     <label for="nameAndSurname">NOMBRE Y APELLIDO</label>
-    <input id="nameAndSurname" type="text" required>
+    <input
+        id="nameAndSurname"
+        type="text" 
+        name="nameAndSurname"
+        required
+    >
 
     <label for="phone">TELÉFONO</label>
-    <input id="phone" type="text" required>
+    <input
+        id="phone" 
+        type="text" 
+        name="phone"
+        required
+    >
 
     <label for="email">EMAIL</label>
-    <input id="email" type="text" required>
+    <input 
+        id="email" 
+        type="text" 
+        name="email"
+        required
+    >
 
     <label for="message">CONSULTA</label>
-    <textarea name="" id="message" />
+    <textarea
+        name="message" 
+        id="message"
+    />
     <div class="box_button_submit" >
         <button type="submit" >
             <Send/>
