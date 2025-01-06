@@ -1,4 +1,6 @@
 ---
+import Send from "./icons/Send.astro";
+
 ---
 
 <form action="">
@@ -13,8 +15,12 @@
 
     <label for="">CONSULTA</label>
     <textarea name="" id="" />
-
-    <button type="submit" ></button>
+    <div class="box_button_submit" >
+        <button type="submit" >
+            <Send/>
+            ENVIAR
+        </button>
+    </div>
 </form>
 
 <style>
@@ -22,5 +28,12 @@
         display: grid;
         align-items: center;
         justify-content: center;
+    }
+    .box_button_submit{
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        padding-block: 15px;
     }
 </style>
