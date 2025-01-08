@@ -54,5 +54,17 @@ import Call from "./icons/Call.astro";
         color: var(--white);
         padding: 10px;
         border-radius: 10px;
+        max-width: 150px;
     }
+
+    @media
+        (width < 900px){
+            .nav_container{
+                width: 100%;
+                padding-inline: 15px;
+            }
+            .nav_box_icons{
+                gap: 10px;
+            }
+        }
 </style>
