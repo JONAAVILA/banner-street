@@ -9,7 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.1.2",
     "astro": "^5.1.2",
-    "emailjs-com": "^3.2.0"
+    "emailjs-com": "^3.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }

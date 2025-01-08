@@ -1,9 +1,11 @@
 ---
+import Slider from "./slider/Slider";
 ---
 
 <section>
     <div>
         <h3>Nuestros</h3>
+        <Slider client:only />
         <h3>clientes</h3>
     </div>
 </section>
@@ -22,7 +24,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         height: 150px;
         max-width: 1250px;
         width: 110vw;
