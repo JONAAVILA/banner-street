@@ -18,6 +18,8 @@ const year = new Date().getFullYear()
         display: flex;
         align-items: center;
         justify-content: center;
+        text-align: center;
+        text-wrap: balance;
         width: 100%;
         color: var(--white);
         background-color: var(--blue);
@@ -25,4 +27,11 @@ const year = new Date().getFullYear()
         font-size: 10px;
         gap: 5px;
     }
+
+    @media
+        (width < 900px){
+            footer{
+                flex-direction: column;
+            }
+        }
 </style>
