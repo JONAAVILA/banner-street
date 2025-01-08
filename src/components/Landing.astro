@@ -23,6 +23,7 @@
 
 <style>
 	section{
+		position: relative;
 		display: grid;
 		align-items: center;
 		justify-content: center;
@@ -82,8 +83,20 @@
 		justify-content: center;
 		align-items: center;
 	}
-	
 	img{
 		width: 100%;
 	}
+
+	@media
+		(width < 900px){
+			h1{
+				font-size: 2.5rem;
+			}
+			h2{
+				font-size: .8rem;
+			}
+			.banner{
+				left: -50%;
+			}
+		}
 </style>

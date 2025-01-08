@@ -43,4 +43,14 @@ import Form from "./Form.astro";
         align-items: center;
         gap: 8px;
     }
+
+    @media
+        (width < 900px){
+            section{
+                flex-direction: column;
+                align-items: center;
+                gap: 50px;
+                width: 90%;
+            }
+        }
 </style>
