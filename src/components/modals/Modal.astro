@@ -1,0 +1,17 @@
+---
+const message = Astro.props
+---
+
+<span>
+    <p>{message}</p>
+</span>
+
+<style>
+    span{
+        z-index: 10;
+        position: fixed;
+        left: 50%;
+        right: 50%;
+        transform: translate(50%,50%);
+    }
+</style>

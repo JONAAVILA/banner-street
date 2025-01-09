@@ -1,0 +1,23 @@
+.contact_form{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+.box_button_submit{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding-block: 15px;
+}
+.box_contact_errors{
+    height: 8px;
+    margin-bottom: 8px;
+    p{
+        font-size: 8px;
+        font-weight: 700;
+        color: #c02d2d;
+        padding-left: 12px;
+    }
+}

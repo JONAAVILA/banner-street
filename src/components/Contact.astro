@@ -1,9 +1,14 @@
 ---
+import ContactForm from "./forms/ContactForm";
 import Email from "./icons/Email.astro";
 import Instagram from "./icons/Instagram.astro";
 import Location from "./icons/Location.astro";
 import Meta from "./icons/Meta.astro";
-import Form from "./Form.astro";
+
+const SERVICE_ID = import.meta.env.VITE_SERVICE_ID
+const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID
+const USER_ID = import.meta.env.VITE_USER_ID
+
 ---
 
 <section>
@@ -18,7 +23,11 @@ import Form from "./Form.astro";
         </div>
     </div>
     <div>
-        <Form/>
+        <ContactForm client:only 
+            serviceId={SERVICE_ID}
+            templateId={TEMPLATE_ID}
+            userId={USER_ID}
+        />
     </div>
 </section>
 
