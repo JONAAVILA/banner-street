@@ -6,34 +6,36 @@ import Response from "./icons/Response.astro";
 ---
 
 <section>
-   <div class="box_info_heading" >
+    <div class="box_info_heading" >
         <h3>¡Pasacalles en el acto!</h3>
-        <div>
-            <p><Award/> CALIDAD</p>
-            <p><Coin/> EL MEJOR PRECIO</p>
-            <p><Response/> RESPUESTA INMEDIATA</p>
-        </div>
-    </div> 
-   <div class="container_phone_number" >
         <div class="box_phone_number" >
             <Call color="blue" size="large" />
             <p class="phone_number" >
                 15 7364-1513
             </p>
         </div>
-        <p class="call_us" >¡LLAMANOS 😜!</p>
+    </div> 
+    <div class="container_phone_number" >
+        <div>
+            <p><Award/> CALIDAD</p>
+            <p><Coin/> EL MEJOR PRECIO</p>
+            <p><Response/> RESPUESTA INMEDIATA</p>
+        </div>
+        <p class="call_us" >¡LLAMANOS 😉!</p>
     </div> 
 </section>
 
 <style>
     section{
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: space-between;
         width: 900px;
         padding-block: 100px;
     }
     h3{
+        font-size: 3rem;
         color: var(--blue);
     }
     p{
@@ -44,16 +46,16 @@ import Response from "./icons/Response.astro";
     }
     .box_info_heading{
         display: flex;
-        flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 15px;
     }
     .container_phone_number{
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-start;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-block: 15px;
+        width: 100%;
     }
     .box_phone_number{
         display: flex;
@@ -74,11 +76,24 @@ import Response from "./icons/Response.astro";
     }
 
     @media
-        (width < 900px){
+        (width < 800px){
             section{
                 width: 90%;
                 display: grid;
                 gap: 30px;
+            }
+            .box_info_heading{
+                flex-direction: column;
+                align-items: center;
+                text-wrap: balance;
+            }
+            h3{
+                font-size: 2.5rem;
+            }
+            .container_phone_number{
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
             }
             .phone_number{
                 font-size: 2.7rem;
