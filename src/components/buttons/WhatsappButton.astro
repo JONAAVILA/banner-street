@@ -29,6 +29,13 @@ const { size } = Astro.props
         padding: 10px;
         border-radius: 40px;
         background-color: var(--blue);
+        transition: all ease-in-out 200ms;
+    }
+    a:hover{
+        background-color: var(--ligth-blue);
+        svg{
+           stroke: var(--grey); 
+        }
     }
     svg{
         stroke-width: 2px;

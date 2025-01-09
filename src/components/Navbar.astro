@@ -2,7 +2,7 @@
 import WhatsappButton from "./buttons/WhatsappButton.astro";
 import InstagramButton from "./buttons/InstagramButton.astro";
 import MetaButton from "./buttons/MetaButton.astro";
-import Call from "./icons/Call.astro";
+import CallButton from "./buttons/CallButton.astro";
 ---
 
 <aside>
@@ -13,10 +13,7 @@ import Call from "./icons/Call.astro";
             <MetaButton/>
         </div>
         <div>
-            <a class="button_call" href="tel:+591173641513">
-                <Call color="white" />
-                15 7364-1513
-            </a>
+            <CallButton/>
         </div>
     </div>
 </aside>
@@ -55,6 +52,7 @@ import Call from "./icons/Call.astro";
         padding: 10px;
         border-radius: 10px;
         max-width: 150px;
+        transition: all ease-in-out 200ms;
     }
 
     @media
