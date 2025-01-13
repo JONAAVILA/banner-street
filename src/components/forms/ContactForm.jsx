@@ -18,7 +18,7 @@ const ContactForm = ({serviceId,templateId,userId})=>{
         validationSchema:validateContact,
         onSubmit: async (values)=>{
             const res = await sendEmail(values,serviceId,templateId,userId)
-            if(res === 'ok'){
+            if(res.data === 'ok'){
                 setAlert('¡Se envió su consulta 😎, en un momento estaremos en contacto!')
                 return
             }
