@@ -9,7 +9,6 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      hostname:'https://pasacalleslamancha.com.ar',
       lastmod: new Date(),
       priority: 1,
     })
