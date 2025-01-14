@@ -29,6 +29,7 @@ const ContactForm = ({serviceId,templateId,userId})=>{
 
     const handleModal = ()=>{
         setAlert('')
+        formik.resetForm()
     }
 
     return(

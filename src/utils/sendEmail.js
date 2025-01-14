@@ -1,8 +1,6 @@
 import emailjs from 'emailjs-com'
 
 export async function sendEmail(values,serviceId,templateId,userId) {
-    console.log('userid',serviceId)
-
     const templateParams = {
         from_name: `👋 ${values.name}`,
         from_email: values.email,
@@ -16,10 +14,8 @@ export async function sendEmail(values,serviceId,templateId,userId) {
             templateParams,
             userId
         )
-        console.log('email',res)
         return res.data
     } catch (error) {
-        console.log('error email',error)
         return error.message
     }
 }
