@@ -1,0 +1,18 @@
+.modal_container{
+    position: fixed;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px 50px;
+    left: 50%;
+    top: 50%;
+    max-width: 350px;
+    border-radius: 10px;
+    background-color: var(--blue);
+    transform: translate(-50%,-50%);
+    p{ 
+        color: var(--white);
+        text-wrap: balance;
+    }
+}

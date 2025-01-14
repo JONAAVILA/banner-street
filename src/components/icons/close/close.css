@@ -1,0 +1,11 @@
+.icon_close{
+    stroke-width: 2px;
+    stroke: var(--white);
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: all ease 200ms;
+}
+.icon_close:hover{
+    transform: rotate(-45deg);
+}

@@ -3,7 +3,7 @@ import './contactForm.css';
 import { validateContact } from '../../utils/validate';
 import { sendEmail } from '../../utils/sendEmail';
 import { useState } from 'react';
-import Modal from '../modals/Modal.astro';
+import Modal from '../modals/modal/Modal';
 
 const ContactForm = ({serviceId,templateId,userId})=>{
     const [alert, setAlert] = useState('')
@@ -17,18 +17,25 @@ const ContactForm = ({serviceId,templateId,userId})=>{
         },
         validationSchema:validateContact,
         onSubmit: async (values)=>{
-            const res = await sendEmail(values,serviceId,templateId,userId)
-            if(res.data === 'ok'){
+            try {
+                await sendEmail(values,serviceId,templateId,userId)
                 setAlert('¡Se envió su consulta 😎, en un momento estaremos en contacto!')
                 return
+            } catch (error) {
+                setAlert('Ocurrió un problema 🤦‍♂️')
             }
-            setAlert('Ocurrió un problema 🤦‍♂️')
         }
     })
 
+    const handleModal = ()=>{
+        setAlert('')
+    }
+
     return(
-        <>
-            {alert && <Modal message={alert} />}
+        <div className='form_container' >
+            <div className='box_modal' >
+                {alert ? <Modal handleModal={handleModal} >{alert}</Modal> : null}
+            </div>
             <form 
                 onSubmit={formik.handleSubmit}
                 className='contact_form'
@@ -90,7 +97,7 @@ const ContactForm = ({serviceId,templateId,userId})=>{
                     </button>
                 </div>
             </form>
-        </>
+        </div>
     )
 }
 

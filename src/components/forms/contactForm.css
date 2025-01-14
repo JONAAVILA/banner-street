@@ -1,3 +1,7 @@
+.form_container{
+    z-index: 1;
+    position: relative;
+}
 .contact_form{
     display: grid;
     align-items: center;

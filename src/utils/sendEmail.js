@@ -17,7 +17,7 @@ export async function sendEmail(values,serviceId,templateId,userId) {
             userId
         )
         console.log('email',res)
-        return res
+        return res.data
     } catch (error) {
         console.log('error email',error)
         return error.message

@@ -22,13 +22,11 @@ const USER_ID = import.meta.env.VITE_USER_ID
             <p><Meta size="small" color="grey" /> PASACALLES LA MANCHA</p>
         </div>
     </div>
-    <div>
-        <ContactForm client:only 
-            serviceId={SERVICE_ID}
-            templateId={TEMPLATE_ID}
-            userId={USER_ID}
-        />
-    </div>
+    <ContactForm client:only="react"
+        serviceId={SERVICE_ID}
+        templateId={TEMPLATE_ID}
+        userId={USER_ID}
+    />
 </section>
 
 <style>
