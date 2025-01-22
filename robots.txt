@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://pasacalleslamancha.com.ar/sitemap.xml
+Sitemap: https://pasacalleslamancha.com.ar/sitemap-index.xml
