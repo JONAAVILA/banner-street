@@ -3,30 +3,43 @@ import './slider.css';
 import images from './images';
 
 const Slider = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [ visibleImages, setVisibleImages ] = useState(3)
-  const interval = 3000
-  const screen = window.innerWidth
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleImages, setVisibleImages] = useState(3);
+  const interval = 3000;
 
-  const goToNextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex >= images.length - visibleImages ? 0 : prevIndex + 1))
-  };
-  
-  useEffect(()=>{ 
-    if(screen <= 500){
+  const updateVisibleImages = () => {
+    const screenWidth = window.innerWidth;
+    
+    if (screenWidth <= 500) {
       setVisibleImages(1)
-    }
-    if(screen >= 750 && screen <= 900 ){
+    } else if (screenWidth >= 750 && screenWidth <= 900) {
+      setVisibleImages(3)
+    } else {
       setVisibleImages(3)
     }
-  },[screen])
+  };
 
   useEffect(() => {
-    const autoPlay = setInterval(goToNextSlide, interval)
-    return () => clearInterval(autoPlay)
-  }, [currentIndex, interval])
+    updateVisibleImages();
 
-  const displayedImages = images.slice(currentIndex, currentIndex + visibleImages)
+    window.addEventListener('resize', updateVisibleImages);
+
+    return () => {
+      window.removeEventListener('resize', updateVisibleImages);
+    };
+  }, []);
+
+  useEffect(() => {
+    const autoPlay = setInterval(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex >= images.length - visibleImages ? 0 : prevIndex + 1
+      );
+    }, interval);
+
+    return () => clearInterval(autoPlay);
+  }, [currentIndex, visibleImages, interval]);
+
+  const displayedImages = images.slice(currentIndex, currentIndex + visibleImages);
 
   return (
     <div className="carousel">
@@ -38,7 +51,7 @@ const Slider = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Slider;
