@@ -22,11 +22,13 @@ const USER_ID = import.meta.env.VITE_USER_ID
             <p><Meta size="small" color="grey" /> PASACALLES LA MANCHA</p>
         </div>
     </div>
-    <ContactForm client:only="react"
-        serviceId={SERVICE_ID}
-        templateId={TEMPLATE_ID}
-        userId={USER_ID}
-    />
+    <div class="contact_container_form" >
+        <ContactForm client:only="react"
+            serviceId={SERVICE_ID}
+            templateId={TEMPLATE_ID}
+            userId={USER_ID}
+        />
+    </div>
 </section>
 
 <style>
@@ -37,6 +39,27 @@ const USER_ID = import.meta.env.VITE_USER_ID
         width: 900px;
         margin-top: 30px;
         margin-bottom: 100px;
+    }
+    .contact_container_form{
+        z-index: -1;
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 60%;
+        background-image: url('/images/Pasacalles-la-Mancha-Buenos-Aires.webp');
+        background-repeat: no-repeat;
+        background-position: calc(100% + 120px) center;
+        background-size: 320%;
+    }
+    .contact_container_form::before{
+        z-index: 2;
+        content: ' ';
+        position: absolute;
+        width: 40px;
+        height: 100%;
+        left: 0;
+        background:linear-gradient(to left,var(--transparent),var(--white));
     }
     h3{
         color: var(--blue);

@@ -18,4 +18,5 @@ export const validateContact = Yup.object().shape({
         .min(5, 'Mesaje muy corto')
         .max(200, 'Demasiado largo')
         .matches(/^[a-zA-Z0-9 ]+$/,'Inválido')
+        .required('El mensaje es requerido'),
 })  
