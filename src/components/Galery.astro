@@ -34,17 +34,19 @@ import Slider from "./slider/Slider";
     div::after{
         position: absolute;
         content: " ";
-        width: 80px;
-        height: 100%;
-        right: -79px;
-        background: linear-gradient(to right, var(--blue),var(--white));
+        width: 100px;
+        height: 110%;
+        right: -20px;
+        background: linear-gradient(to right, var(--transparent) 15%, var(--white) 50%, var(--white) 100%);
+        transform: rotate(5deg);
     }
     div::before{
         position: absolute;
         content: " ";
-        width: 80px;
-        height: 100%;
-        left: -79px;
-        background: linear-gradient(to left, var(--blue),var(--white));
+        width: 100px;
+        height: 110%;
+        left: -20px;
+        background: linear-gradient(to left, var(--transparent) 15%, var(--white) 50%, var(--white) 100%);
+        transform: rotate(5deg);
     }
 </style>
