@@ -12,6 +12,9 @@ const USER_ID = import.meta.env.VITE_USER_ID
 ---
 
 <section>
+    <div class="box_image_banner" >
+        <img src="/images/Pasacalles-la-Mancha-Avellaneda-Buenos-Aires.png" />
+    </div>
     <div>
         <h3>Dejanos tu consulta</h3>
         <h4>TE ENVIAMOS EL PRESUPUESTO POR EMAIL, WHATSAPP O TE LLAMAMOS</h4>
@@ -33,6 +36,7 @@ const USER_ID = import.meta.env.VITE_USER_ID
 
 <style>
     section{
+        position: relative;
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
@@ -40,19 +44,14 @@ const USER_ID = import.meta.env.VITE_USER_ID
         margin-top: 30px;
         margin-bottom: 100px;
     }
-    .contact_container_form{
+    .box_image_banner{
         z-index: -1;
-        position: relative;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        width: 60%;
-        background-image: url('/images/Pasacalles-la-Mancha-Buenos-Aires.png');
-        background-repeat: no-repeat;
-        background-position: calc(100% + 120px) center;
-        background-size: 320%;
+        position: absolute;
+        right: -40px;
+        top: 50%;
+        transform: translateY(-50%);
     }
-    .contact_container_form::before{
+    .box_image_banner::before{
         z-index: 2;
         content: ' ';
         position: absolute;
@@ -60,6 +59,23 @@ const USER_ID = import.meta.env.VITE_USER_ID
         height: 100%;
         left: 0;
         background:linear-gradient(to left,var(--transparent),var(--white));
+    }
+    .box_image_banner::after{
+        z-index: 2;
+        content: ' ';
+        position: absolute;
+        width: 40px;
+        height: 100%;
+        right: 0;
+        background:linear-gradient(to right,var(--transparent),var(--white));
+    }
+    .contact_container_form{
+        z-index: -1;
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
     }
     h3{
         color: var(--blue);
