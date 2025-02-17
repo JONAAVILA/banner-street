@@ -3,50 +3,40 @@ import Slider from "./slider/Slider";
 ---
 
 <section>
-    <div>
-        <h3>Nuestros</h3>
-        <Slider client:only />
-        <h3>clientes</h3>
-    </div>
+    <h3>Nuestros</h3>
+    <Slider client:only />
+    <h3>clientes</h3>
 </section>
 
 <style>
     section{
-        display: grid;
-        align-items: center;
-        justify-content: center;
-        margin-top: -150px;
-        height: 300px;
-        width: 100%;
-        overflow: hidden;
-    }
-    div{
-        position: relative;
+        position:relative;
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 150px;
-        max-width: 1350px;
-        width: 110vw;
+        margin-top: -80px;
+        height: 200px;
+        min-width: 1300px;
+        width: 96%;
         background-color: var(--blue);
         transform: rotate(-5deg);
     }
-    div::after{
+    section::after{
         position: absolute;
         content: " ";
-        width: 100px;
+        width: 50px;
         height: 110%;
-        right: -20px;
-        background: linear-gradient(to right, var(--transparent) 15%, var(--white) 50%, var(--white) 100%);
+        right: -10px;
+        background: var(--white);
         transform: rotate(5deg);
     }
-    div::before{
+    section::before{
         position: absolute;
         content: " ";
-        width: 100px;
+        width: 50px;
         height: 110%;
-        left: -20px;
-        background: linear-gradient(to left, var(--transparent) 15%, var(--white) 50%, var(--white) 100%);
+        left: -10px;
+        background: var(--white);
         transform: rotate(5deg);
     }
 </style>
