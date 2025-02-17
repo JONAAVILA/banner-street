@@ -11,7 +11,7 @@
   width: 80px;
   height: 150px;
   right: 25px;
-  background: linear-gradient(to left,var(--blue),var(--transparent));
+  background: linear-gradient(to left,#dfe955,var(--transparent));
 }
 .carousel::before{
   position: absolute;
@@ -19,7 +19,7 @@
   width: 80px;
   height: 150px;
   left: 25px;
-  background: linear-gradient(to right,var(--blue),var(--transparent));
+  background: linear-gradient(to right,#dfe955,var(--transparent));
 }
 .slide-container {
   display: flex;
