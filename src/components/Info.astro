@@ -8,18 +8,18 @@ import Response from "./icons/Response.astro";
 <section>
     <div class="box_info_heading" >
         <h3>¡Pasacalles en el acto!</h3>
+        <div>
+            <p><Award/> CALIDAD</p>
+            <p><Coin/> EL MEJOR PRECIO</p>
+            <p><Response/> RESPUESTA INMEDIATA</p>
+        </div>
+    </div> 
+    <div class="container_phone_number" >
         <div class="box_phone_number" >
             <WhatsappButton size="large" />
             <p class="phone_number" >
                 15 7364-1513
             </p>
-        </div>
-    </div> 
-    <div class="container_phone_number" >
-        <div>
-            <p><Award/> CALIDAD</p>
-            <p><Coin/> EL MEJOR PRECIO</p>
-            <p><Response/> RESPUESTA INMEDIATA</p>
         </div>
         <p class="call_us" >¡LLAMANOS 😉!</p>
     </div> 
@@ -28,7 +28,6 @@ import Response from "./icons/Response.astro";
 <style>
     section{
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: space-between;
         width: 1000px;
@@ -45,7 +44,7 @@ import Response from "./icons/Response.astro";
         gap: 5px;
     }
     .box_info_heading{
-        display: flex;
+        display: grid;
         align-items: flex-start;
         justify-content: space-between;
         width: 100%;
@@ -53,15 +52,16 @@ import Response from "./icons/Response.astro";
     }
     .container_phone_number{
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding-block: 15px;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
         width: 100%;
+        gap: 25px;
     }
     .box_phone_number{
         display: flex;
         align-items: center;
-        gap: 25px;
+        gap: 5px;
     }
     .phone_number{
         font-family: 'Gagalin-Regular', sans-serif;
@@ -82,7 +82,7 @@ import Response from "./icons/Response.astro";
             section{
                 width: 90%;
                 display: grid;
-                gap: 30px;
+                gap: 50px;
             }
             .box_info_heading{
                 flex-direction: column;
@@ -94,7 +94,7 @@ import Response from "./icons/Response.astro";
             }
             .container_phone_number{
                 flex-direction: column;
-                gap: 20px;
+                gap: 5px;
             }
             .phone_number{
                 font-size: 2.7rem;

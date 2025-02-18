@@ -8,7 +8,6 @@ const { size } = Astro.props
     target="_blank"
     aria-label="Mandános un Whatsapp para mas consultas"
 >
-    <img src='/favicon.svg' alt="">
     <svg 
         width="24"  
         height="24"  
@@ -40,23 +39,13 @@ const { size } = Astro.props
             width: 90px;
         }
     }
-    img{
-        z-index: -1;
-        position: absolute;
-        width: 80px;
-        left: 50%;
-        top: 50%;
-        transition: all ease-in-out 200ms ;
-        transform: translate(-50%,-50%);
-    }
     svg{
         stroke-width: 2px;
-        stroke: var(--white);
+        stroke: var(--grey);
         stroke-linecap: round;
-        margin-right: 2px;
     }
     .large{
-        width: 25px;
-        height: 25px;
+        width: 45px;
+        height: 45px;
     }
 </style>
