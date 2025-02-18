@@ -10,7 +10,7 @@
   content: " ";
   width: 80px;
   height: 150px;
-  right: 25px;
+  right: 23px;
   background: linear-gradient(to left,var(--yellow),var(--transparent));
 }
 .carousel::before{
@@ -18,7 +18,7 @@
   content: " ";
   width: 80px;
   height: 150px;
-  left: 25px;
+  left: 23px;
   background: linear-gradient(to right,var(--yellow),var(--transparent));
 }
 .slide-container {
@@ -52,8 +52,9 @@
   (width < 700px){
       .carousel{
           width: 300px;
+          height: 100px;
       }
       .slide img{
-          width: 40%;
+          width: 90%;
       }
   }
