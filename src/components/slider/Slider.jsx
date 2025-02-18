@@ -10,9 +10,9 @@ const Slider = () => {
   const updateVisibleImages = () => {
     const screenWidth = window.innerWidth;
     
-    if (screenWidth <= 500) {
+    if (screenWidth <= 700) {
       setVisibleImages(1)
-    } else if (screenWidth >= 750 && screenWidth <= 900) {
+    } else if (screenWidth >= 850 && screenWidth <= 900) {
       setVisibleImages(3)
     } else {
       setVisibleImages(3)
