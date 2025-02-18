@@ -51,9 +51,9 @@
 @media
   (width < 900px){
       .carousel{
-          width: 100%;
+          width: 90%;
       }
       .slide img{
-          width: 70%;
+          width: 40%;
       }
   }
