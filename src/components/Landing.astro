@@ -19,6 +19,7 @@
 			alt="Pasacalles la Mancha en Avellaneda y Alrededores, Trabajamos en Zona Sur, Zona Norte, Zona Oeste y Zona Este del Amba"
 		>
 	</div>
+	<img class='banner_mobile' src="favicon.svg" alt="">
 	<header>
 		<h1>
 			<span>
@@ -47,6 +48,9 @@
 		flex-direction: column;
 		align-items: center;
 	}
+	.banner_mobile{
+		display: none;
+	}
 	.pasacalles{
 		font-family: 'Poppins-SemiBold',sans-serif;
 		font-size: 1.6rem;
@@ -59,8 +63,6 @@
 		display: grid;
 		align-items: center;
 		justify-content: center;
-		width: 90%;
-		height: 100%;
 		min-width: 1300px;
 		max-width: 1500px;
 		left: 50%;
@@ -115,8 +117,17 @@
 				font-size: .8rem;
 			}
 			.banner{
-				left: 50%;
-				min-width: none;
+				display: none;
+			}
+			.banner_mobile{
+				position: absolute;
+				display: grid;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				left:50%;
+				top:50%;
+				transform:translate(-50%,-50%);
 			}
 		}
 </style>
