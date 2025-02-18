@@ -28,7 +28,8 @@ const USER_ID = import.meta.env.VITE_USER_ID
         </div>
     </div>
     <div class="contact_container_form" >
-        <ContactForm client:only="react"
+        <ContactForm 
+            client:only="react"
             serviceId={SERVICE_ID}
             templateId={TEMPLATE_ID}
             userId={USER_ID}
@@ -54,7 +55,7 @@ const USER_ID = import.meta.env.VITE_USER_ID
         transform: translateY(-50%);
     }
     .box_image_banner::before{
-        z-index: 2;
+        z-index: 0;
         content: ' ';
         position: absolute;
         width: 40px;
@@ -63,7 +64,7 @@ const USER_ID = import.meta.env.VITE_USER_ID
         background:linear-gradient(to left,var(--transparent),var(--white));
     }
     .box_image_banner::after{
-        z-index: 2;
+        z-index:0;
         content: ' ';
         position: absolute;
         width: 40px;
@@ -72,7 +73,6 @@ const USER_ID = import.meta.env.VITE_USER_ID
         background:linear-gradient(to right,var(--transparent),var(--white));
     }
     .contact_container_form{
-        z-index: -1;
         position: relative;
         display: grid;
         align-items: center;
