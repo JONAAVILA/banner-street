@@ -6,19 +6,21 @@
   align-items: center;
 }
 .carousel::after{
+  z-index: 2;
   position: absolute;
   content: " ";
   width: 80px;
   height: 150px;
-  right: 23px;
+  right: 20px;
   background: linear-gradient(to left,var(--yellow),var(--transparent));
 }
 .carousel::before{
+  z-index: 2;
   position: absolute;
   content: " ";
   width: 80px;
   height: 150px;
-  left: 23px;
+  left: 20px;
   background: linear-gradient(to right,var(--yellow),var(--transparent));
 }
 .slide-container {
