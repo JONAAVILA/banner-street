@@ -1,11 +1,10 @@
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
+		<meta charset="UTF-8"/>
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<meta charset="UTF-8">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Pasacalles La Mancha ofrece un Servicio Rápido y Confiable de Impresión y Colocación de Pasacalles en toda Buenos Aires. Diseños Personalizados, Entrega en Tiempo Récord y Atención Profesional. ¡Comunica tu Mensaje de forma Impactante! - Pasacalles Express, Trabajamos en Zona Sur, Zona Norte, Zona Oeste y Zona Este">
@@ -29,9 +28,9 @@
 	
 		<title>Pasacalles La Mancha | Rápido y en Todo Buenos Aires | Pasacalles</title>
 		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16893893581">
+		<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-16893893581">
 		</script>
-		<script>
+		<script is:inline >
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
@@ -41,7 +40,7 @@
 
 		<!-- Event snippet for Contacto conversion page
 		In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-		<script>
+		<script is:inline >
 			function gtag_report_conversion(url) {
 			var callback = function () {
 				if (typeof(url) != 'undefined') {
