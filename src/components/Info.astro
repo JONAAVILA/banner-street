@@ -17,9 +17,14 @@ import Response from "./icons/Response.astro";
     <div class="container_phone_number" >
         <div class="box_phone_number" >
             <WhatsappButton size="large" />
-            <p class="phone_number" >
+            <a 
+                href="https://wa.link/7mf3n2"
+                rel="noreferrer"
+                target="_blank"
+                aria-label="Hablanos a nuestro whatsapp!"
+            >
                 15 7364-1513
-            </p>
+            </a>
         </div>
         <p class="call_us" >¡LLAMANOS 😉!</p>
     </div> 
@@ -63,7 +68,7 @@ import Response from "./icons/Response.astro";
         align-items: center;
         gap: 10px;
     }
-    .phone_number{
+    a{
         font-family: 'Gagalin-Regular', sans-serif;
         display: flex;
         align-items: center;
